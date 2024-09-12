@@ -1,6 +1,6 @@
 name: superstore
 description: A talos snowflake app
-version: 0.1.6
+version: 0.1.12
 auth:
   heimdallUrl: https://liberal-donkey.dataos.app/heimdall
 logLevel: DEBUG  
@@ -8,8 +8,8 @@ sources:
   - name: snowflake
     type: snowflake
     connection:
-      account: dz80249.central-india.azure
-      username: "highonlife"
-      password: "Lowonlife1"
+      account: zg11815.central-india.azure
+      username: "shraddha"
+      password: "Itsasecret1"
       warehouse: mywarehouse
       database: "mydatabase"

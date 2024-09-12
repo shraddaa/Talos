@@ -1,13 +1,13 @@
 version: "2.2"
 services:
   talos:
-    image: rubiklabs/talos:0.1.6
+    image: rubiklabs/talos:0.1.12
     ports:
       - "3000:3000"
     volumes:
       - .:/etc/dataos/work
     environment:
       DATAOS_RUN_AS_USER: shraddhaade
-      DATAOS_RUN_AS_APIKEY: dG9rZW5fZnJlZWx5X3llYXJseV91c2VmdWxfYnVmZmFsby5lOWNiYmEyOS05YzdmLTRhZmYtOTM3NC1mNDAzMjdhNTYwYWE=
+      DATAOS_RUN_AS_APIKEY: dG9rZW5faG9wZWZ1bGx5X3Nsb3dseV9ndWlkZWRfa2luZ2Zpc2guZGExMzU3YWItMjA5Mi00NTc1LTg4Y2MtYmRlOWI4YWM2YThm
       DATAOS_FQDN: liberal-donkey.dataos.app
     tty: true
