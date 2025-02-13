@@ -1,0 +1,9 @@
+urlPath: /checks
+description: This endpoint provides access to detailed cost metrics, including breakdowns by cloud service, total invocation events, and cost extremes. It enables users to analyze cloud expenditure, track spending patterns, and evaluate financial efficiency across various cloud services.
+source: lens
+response:
+  - name: cost_by_cloud_service
+    description: The total cost associated with different cloud services, providing insights into spending by service.
+
+tags:
+  - example
