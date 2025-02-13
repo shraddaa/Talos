@@ -1,1 +1,1 @@
-SELECT * FROM myschema.mytable LIMIT 10;
+SELECT total_datasets FROM datasets LIMIT 20

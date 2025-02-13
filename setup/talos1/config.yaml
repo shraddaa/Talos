@@ -1,15 +1,35 @@
-name: superstore
-description: A talos snowflake app
-version: 0.1.12
+name: coke_insights
+description: This configuration provides basic insights into vendor subscription data
+version: 0.1.25  # Current version of the configuration
 auth:
-  heimdallUrl: https://liberal-donkey.dataos.app/heimdall
-logLevel: DEBUG  
+  heimdallUrl: https://unique-haddock.dataos.app/heimdall  # Authentication service URL
+  userGroups:
+
+    - name: dataproductdeveloper
+      description: Developers with access to data product development
+      includes:
+        - users:id:shraddhaade  # User ID of a developer
+
+
+    - name: vendors
+      description: Group for external users accessing vendor-related data
+      includes:
+        - users:id:piyushjoshi  # User ID of a consumer
+
+
+logLevel: 'DEBUG'  # Logging level for the application
+cache: tmp  # Temporary cache location
+metrics:
+  type: summary  # Type of metrics to be collected
+  percentiles: [0.5, 0.75, 0.95, 0.98, 0.99, 0.999]  # Percentiles for performance metrics
+rateLimit:
+  enabled: true  # Enable rate limiting
+  options:
+    interval:
+      min: 1  # Minimum interval for rate limiting
+      max: 100  # Maximum requests allowed
+      delayAfter: 10  # Delay after a certain number of requests
 sources:
-  - name: snowflake
-    type: snowflake
-    connection:
-      account: zg11815.central-india.azure
-      username: "shraddha"
-      password: "Itsasecret1"
-      warehouse: mywarehouse
-      database: "mydatabase"
+  - name: coke360  # Profile name for the data source
+    type: lens  # Type of data source
+    lensName: 'public:coke360'  # Specific lens name for accessing data
